@@ -1,0 +1,17 @@
+body{
+background-color: rgb(24, 23, 23);
+}
+
+div.text-center > h3{
+margin-top: 40px;
+color: rgb(187, 146, 14);
+}
+
+div.text-center > h1{
+margin-top: 40px;
+color: white;
+}
+
+div.input-group{
+transform: translateY(3em);
+}
