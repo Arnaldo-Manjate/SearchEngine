@@ -6,6 +6,8 @@
         echo "No Books Found";
    }
 ?>
+<!-- you dont need the above in the index.php -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,21 +31,28 @@
     <div class="container">
         <form action="search.php" method="post" >
             <div class="input-group">
+                <!-- add a placeholder to the input below -->
                 <input type="text" class="form-control" name="search">     
-             
+                <!-- add a button here to search -->
         </form>
     </div>
+    <!-- you dont need to show a list here -->
     <!-- LIST -->
     <br><br><br>
     <div class="container">
+        <p class="no_content"></p>
         <ul class="list-group text-center form-hover">
-<?php while( $book = $Books->fetch_assoc()):?>
-            <li class="list-group-item"><a href="<?php echo $book["Link"] ?>"><?php echo $book["Title"] ?></a></li>
-<?php endwhile; ?>
+            <?php while( $book = $Books->fetch_assoc()):?>
+                <li class="list-group-item">
+                    <a href="<?php echo $book["Link"] ?>">
+                        <?php echo $book["Title"] ?>
+                    </a>
+                </li>
+            <?php endwhile; ?>
         </ul>
-
     </div>
     
+    <!-- dont add js to the mainly keep it html, css and php -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </div>
